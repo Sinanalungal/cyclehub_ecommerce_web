@@ -16,7 +16,7 @@ services:
       - .:/app
     container_name: cyclehub_container
     ports:
-      - 8090:8000
+      - 8000:8000
     image: app:cyclehub
 
     command: bash -c "apt-get update && apt-get install -y postgresql-client && gunicorn --bind 0.0.0.0:8000 cyclehub.wsgi:application && python manage.py collectstatic && python manage.py makemigrations "
