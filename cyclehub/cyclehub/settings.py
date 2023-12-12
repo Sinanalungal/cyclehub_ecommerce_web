@@ -86,17 +86,10 @@ WSGI_APPLICATION = 'cyclehub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-<<<<<<< HEAD
         'NAME':os.environ.get("DB_NAME"),
         'USER':os.environ.get("DB_USER"),
         'PASSWORD':os.environ.get("DB_PASSWORD"),
         'HOST':'localhost',
-=======
-        'NAME':'cyclehub',
-        'USER':'postgres',
-        'PASSWORD':'9207400638',
-        'HOST':'postgres_db',
->>>>>>> da751db917efe95b3faff82a5a2702a0cabeeab4
         'PORT':'5432',
     }
 }
