@@ -111,8 +111,11 @@
 			
 			<h6 class="stock-status d-inline-block bg-success text-white font_12 ps-3 pe-3 pt-2 pb-2 rounded-1">In Stock</h6>
 			 <h4 class="mt-2 mb-2">{{k.product_name|title}}</h4>
-
+			{% if k.category_id.category_offer == 0 and k.product_offer == 0%}
+			 <h4 class="mt-3 mb-3" style='font-size:19px;'><span class="dynamic-offer-price col_yell me-1">{{k.tyresize_set.all.0.offer_price}}</span></h4>
+            {%else%}
 			 <h4 class="mt-3 mb-3" style='font-size:19px;'><span class="dynamic-offer-price col_yell me-1">{{k.tyresize_set.all.0.offer_price}}</span><span class="dynamic-price font_14  text-decoration-line-through " style='color:red;'>{{k.tyresize_set.all.0.price}}</span></h4>
+			{%endif%}
 			 <p>{{ k.description |title}}</p>
 			 <h6><span class="me-2">Size :</span> 
 		   </h6>

@@ -32,7 +32,9 @@
       display: flex;
       align-items: center;
   }
- 
+  .navbar-nav li a {
+    color:white!important;
+  }
   
   .email-input {
       border: 1px solid #ccc;
@@ -93,12 +95,42 @@
                   </ul>
                 </li>
                 
+                {%if request.user.is_authenticated %}
+                {%if request.user.is_superuser%}
+                {%else%}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'wishlist'  %}">Wishlist</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'cart'  %}">Cart</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'wallet' %}">Wallet</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'userprofile' %}">User Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'order_page' %}">My Orders</a>
+                </li>
+                {%endif%}
+                {%endif%}
+                
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'contact'  %}">Contact</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="{% url 'about'  %}">About</a>
                 </li>
+                {%if request.user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="../../logoutt">Logout</a>
+                </li>
+                {%else%}
+                <li class="nav-item">
+                  <a class="nav-link" href="../../login">Login</a>
+                </li>
+                {%endif%}
               </ul>
              
             </div>
