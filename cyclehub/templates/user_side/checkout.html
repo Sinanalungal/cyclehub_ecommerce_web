@@ -7,36 +7,7 @@
 
 
 <style>
-	.button-2 {
-		background-color: black;
-		border-radius: 8px;
-		border-width: 0;
-		color: #333333;
-		cursor: pointer;
-		display: inline-block;
-		font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		font-size: 14px;
-		font-weight: 500;
-		line-height: 20px;
-		list-style: none;
-		margin: 0;
-		padding: 7px 11px;
-		text-align: center;
-		transition: all 200ms;
-		vertical-align: baseline;
-		white-space: nowrap;
-		user-select: none;
-		-webkit-user-select: none;
-		touch-action: manipulation;
-	}
-			  
-			  
-	.custom-select {
-		position: relative;
-		display: inline-block;
-		
-	}
-	  
+	
 	.select-header {
 	background-color: #f9f9f9;
 	padding: 8px;
@@ -47,72 +18,14 @@
 	.select-header span {
 	display: block;
 	}
-	/* CSS */
-	.button-39 {
-	background-color: #FFFFFF;
-	border: 1px solid rgb(209,213,219);
-	border-radius: .5rem;
-	box-sizing: border-box;
-	color: #111827;
-	font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	font-size: .875rem;
-	font-weight: 600;
-	line-height: 1.25rem;
-	padding: .50rem 1rem;
-	text-align: center;
-	text-decoration: none #D1D5DB solid;
-	text-decoration-thickness: auto;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-	cursor: pointer;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
-	}
 	
-	.button-39:hover {
-	background-color: rgb(249,250,251);
-	}
-	
-	.button-39:focus {
-	outline: 2px solid transparent;
-	outline-offset: 2px;
-	}
-	
-	.button-39:focus-visible {
-	box-shadow: none;
-	}
-	.button-40 {
-	background-color:#1d4289;
-	border: 1px solid rgb(209,213,219);
-	border-radius: .5rem;
-	box-sizing: border-box;
-	color:white;
-	font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-	font-size: .875rem;
-	font-weight: 600;
-	line-height: 1.25rem;
-	padding: .50rem 1rem;
-	text-align: center;
-	text-decoration: none #D1D5DB solid;
-	text-decoration-thickness: auto;
-	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-	cursor: pointer;
-	user-select: none;
-	-webkit-user-select: none;
-	touch-action: manipulation;
+	.button {
+		font-size: 10px;
+		color: white;
+		cursor:pointer;
 	}
 	
 	
-	.button-40:focus {
-	outline: 2px solid transparent;
-	outline-offset: 2px;
-	}
-	
-	.button-40:focus-visible {
-	box-shadow: none;
-	}
-	  
-	  
 </style>
 <link href="{% static 'user_side/css/checkout.css'%}" rel="stylesheet">{% endblock %}
 {% block content %}
@@ -181,15 +94,16 @@
 			<h5>OFFERS</h5>
 			<hr class="line">			
 			<p><b>Apply Coupon</b></p>
-			<input class='col-md-12' id='appliedcoupon' name='appliedcoupon'>
+			<input class='col-10 ms-2' id='appliedcoupon' name='appliedcoupon'>
 			<div id="couponMessage" style="font-size: 10px; color: red;"></div>
-		    <div class='col-md-12 mt-3 mb-3'>
-				<span class="button-40" onclick="submitForm()">Apply Coupon</span>
-				<a href='javascript:void(0);' onclick="removeCoupon()"><span class="button-39 ms-2" >REMOVE</span></a>
-				<button type="button" class=" col-4 ms-3 button-2" data-toggle="modal" data-target="#exampleModalLong" style='color:white;font-size:12px;'>
-					Avilable Coupons
+			<div class='col-md-12 mt-3 ms-2 mb-3 row'>
+				<button class="button col-5" onclick="submitForm()">Apply Coupon</button>
+				<button class="button col-5 ms-2 mt-1" onclick="removeCoupon()" style='background-color:white!important;color:black!important;'>REMOVE</button>
+				<button class="button col-10 mt-1" data-toggle="modal" data-target="#exampleModalLong" style='background-color:black!important;color:white!important;'>
+					Available Coupons
 				</button>
 			</div>
+
 		</div>
 			
        <div class="checkout_1r">
