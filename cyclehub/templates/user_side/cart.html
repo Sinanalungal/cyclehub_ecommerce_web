@@ -191,7 +191,7 @@
             </div>
             {% endif %}
           </div>
-          {% if i.tyresize_id.stock > 0 %}
+          {% comment %} {% if i.tyresize_id.stock > 0 %}
           <div class="text-end">
             <span style="font-size: 15px"><strong>Total:</strong></span>
             <span class="total-price-{{i.id}}">₹{{i.total}}</span>
@@ -203,7 +203,7 @@
             <span class="total-price-{{i.id}}">₹0.00</span>
           </div>
           <br />
-          {%endif%}
+          {%endif%} {% endcomment %}
         </div>
         
         {% endfor %} {%endif%}
