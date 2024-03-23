@@ -24,7 +24,7 @@ Welcome to CYCLE HUB,  Your ultimate destination for all cycling needs, from bik
 - *Product and User Control:* Enjoy effortless control over products and user accounts for optimal administration.
 - *Coupon Mastery:* Fine-tune promotions with comprehensive control over coupon generation and management.
 - *Dynamic Banner Changes:* Keep your storefront fresh with the ability to dynamically change banners for strategic promotions.
-- 
+
 
 ## Cutting-Edge Tech Stack:
 
